@@ -1,4 +1,4 @@
-package Homework12;
+package Homework123;
 /*
 Extra Homework 1:
     剪刀石头布 (1、剪刀 2、石头 3、布)
@@ -7,8 +7,6 @@ Extra Homework 2:
         -起征点：5000
         -从控制台输入薪水，计算出税后的工资薪水
  */
-import java.net.Socket;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 

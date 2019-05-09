@@ -1,4 +1,4 @@
-package Homework12;
+package Homework123;
 
 import java.util.Scanner;
 
@@ -16,6 +16,11 @@ public class Main {
             System.out.println("7、Homework2-4");
             System.out.println("8、Homework2-5");
             System.out.println("9、Homework2-6");
+            System.out.println("10、Homework3-1");
+            System.out.println("11、Homework3-2");
+            System.out.println("12、Homework3-3");
+            System.out.println("13、Homework3-4");
+
             System.out.println("Please input a number: ");
             int hmk = in.nextInt();
             switch (hmk) {
@@ -46,10 +51,23 @@ public class Main {
                 case 9:
                     Homework.Hmk2_6();
                     break;
+                case 10:
+                    Homework.Hmk3_1();
+                    break;
+                case 11:
+                    Homework.Hmk3_2();
+                    break;
+                case 12:
+                    Homework.Hmk3_3();
+                    break;
+                case 13:
+                    Homework.Hmk3_4();
+                    break;
                 default:
                     System.out.println("Number Error");
             }
             System.out.println();
+
         }
     }
 }
