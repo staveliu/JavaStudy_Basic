@@ -1,9 +1,21 @@
 package Homework12;
-
+/*
+Extra Homework 1:
+    剪刀石头布 (1、剪刀 2、石头 3、布)
+Extra Homework 2:
+    个人所得税：
+        -起征点：5000
+        -从控制台输入薪水，计算出税后的工资薪水
+ */
+import java.net.Socket;
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Hmk {
     private Scanner in = new Scanner(System.in);
+    private Random rand = new Random();
+
     public void Hmk1_1(){
         System.out.println("Please input a year: ");
         int year = in.nextInt();
@@ -116,5 +128,83 @@ public class Hmk {
             if (n%5==0)
                 System.out.println();
         }
+    }
+    public void Hmk3_1(){
+        String str;
+        System.out.println("Please input a string: ");
+        str = this.in.nextLine();
+        char a;
+        System.out.println("Please input a char: ");
+        a = this.in.next().charAt(0);
+        int i=0,j=0;
+        int position[]=new int[100];
+        for (char b:str.toCharArray()){
+            if (a==b){
+                position[j]=i;
+                j++;
+            }
+            i++;
+        }
+        System.out.print("It shows at:");
+        for (i=0;i<j;i++){
+            System.out.print(position[i]+" ");
+        }
+    }
+    public void Hmk3_2(){
+        int red[] = new int[33];
+        int blue[] = new int[16];
+        int ball[] = new int[7];
+        for (int i=0;i<33;i++){
+            red[i]=i+1;
+        }
+        for (int i=0;i<16;i++){
+            blue[i]=i+1;
+        }
+        System.out.println("您的双色球号码为: ");
+        System.out.print("红球: ");
+        for (int i=0;i<6;i++){
+            ball[i]=red[rand.nextInt(33)];
+            System.out.print(ball[i]+" ");
+        }
+
+        ball[6]=blue[rand.nextInt(16)];
+        System.out.print('\n'+"蓝球: "+ball[6]);
+    }
+    public void Hmk3_3(){
+        System.out.println("请输入身份证号:");
+        String id = in.nextLine();
+        int sum = 0;
+        char[] chekBit = {'1','0','X','9','8','7','6','5','4','3','2'};
+        int[] power = {7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2};
+        char[] strinigAll = id.toCharArray();
+        for (int i = 0; i < 17; i++) {
+            sum += power[i]*(strinigAll[i] - '0');
+        }
+        if(strinigAll[17] == chekBit[sum%11]){
+            System.out.println("身份证合法");
+        }else {
+            System.out.println("身份证不合法");
+        }
+    }
+    public void Hmk3_4(){
+        System.out.println("请输入十个数字: ");
+        int nums[]=new int[10];
+        for (int i=0;i<10;i++){
+            nums[i]=in.nextInt();
+        }
+        for (int i=0;i<10;i++){
+            for (int j=i+1;j<10;j++){
+                if (nums[i]>nums[j]) {
+                    int temp = nums[i];
+                    nums[i]=nums[j];
+                    nums[j]=temp;
+                }
+            }
+        }
+        System.out.println("升序排序好后的十个数：");
+        for (int i=0;i<10;i++){
+            System.out.print(nums[i]+" ");
+        }
+        System.out.print("\n最大数为: "+nums[9]+"\n最小数为: "+nums[0]);
     }
 }
