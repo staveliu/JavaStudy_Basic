@@ -1,14 +1,8 @@
+
 package Homework123;
-/*
-Extra Homework 1:
-    剪刀石头布 (1、剪刀 2、石头 3、布)
-Extra Homework 2:
-    个人所得税：
-        -起征点：5000
-        -从控制台输入薪水，计算出税后的工资薪水
- */
-import java.util.Random;
-import java.util.Scanner;
+
+        import java.util.Random;
+        import java.util.Scanner;
 
 public class Hmk {
     private Scanner in = new Scanner(System.in);
@@ -135,7 +129,7 @@ public class Hmk {
         System.out.println("Please input a char: ");
         a = this.in.next().charAt(0);
         int i=0,j=0;
-        int position[]=new int[100];
+        int[] position=new int[100];
         for (char b:str.toCharArray()){
             if (a==b){
                 position[j]=i;
