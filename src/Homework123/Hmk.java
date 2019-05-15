@@ -1,8 +1,7 @@
-
 package Homework123;
 
-        import java.util.Random;
-        import java.util.Scanner;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Hmk {
     private Scanner in = new Scanner(System.in);
@@ -17,8 +16,8 @@ public class Hmk {
             System.out.println("这是一个平年");
         }
     }
-    public void Hmk1_2(){
 
+    public void Hmk1_2(){
         System.out.println("Please input a score: ");
         int score = in.nextInt();
         if (score>=90 && score<=100) {
