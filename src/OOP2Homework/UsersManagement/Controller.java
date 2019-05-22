@@ -1,7 +1,7 @@
 package OOP2Homework.UsersManagement;
 
 public class Controller{
-    private User[] users = {};
+    User[] users = {};
     public boolean register(String username, String password, String email){
         try{
             for (User verify : users) {
