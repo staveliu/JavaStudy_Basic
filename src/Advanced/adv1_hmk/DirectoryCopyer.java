@@ -49,8 +49,8 @@ public class DirectoryCopyer {
         }
     }
     public static void main(String[] args){
-        File dir1 = new File("/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/");
-        File dir2 = new File("./jdk");
+        File dir1 = new File("./src");
+        File dir2 = new File("./src1/");
 
         dir2.mkdir();
         if (dir1.isDirectory()) {
