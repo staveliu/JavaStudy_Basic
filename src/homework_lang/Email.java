@@ -4,7 +4,7 @@ import java.util.Set;
 public class Email {
     public static boolean checkEmail(String email)
     {
-        String regex = "^([a-z0-9A-Z]+[-|\\._]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+        String regex = "^([a-z0-9A-Z]+[-|\\._]?)@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
         if(email.matches(regex))
         {
             return true;
@@ -15,7 +15,7 @@ public class Email {
         }
     }
     public static boolean chk163(String validEmail){
-        String regex = "^([a-z0-9A-Z]+[-|\\.|_]?)+[a-z0-9A-Z]@163.com$";
+        String regex = "^([a-z0-9A-Z]+[-|\\.|_]?)@163.com$";
         if (validEmail.matches(regex)){
             return true;
         }else{
@@ -23,7 +23,7 @@ public class Email {
         }
     }
     public static void main(String[] args){
-        String email = "admin@1633.com";
+        String email = "admin12@163.com";
         boolean verify = checkEmail(email);
         if (verify){
             System.out.println("Email is valid!");

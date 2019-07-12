@@ -11,7 +11,7 @@ public class ClientClass {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String name = br.readLine();
 
-            Socket client = new Socket("localhost",7777);
+            Socket client = new Socket("192.168.1.104",8877);
 
             new Thread(new Send(client,name)).start();
 

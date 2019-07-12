@@ -8,9 +8,9 @@ public class App {
 	public static void main(String[] args) {
 		final int thread = 100;
 		ExecutorService pool = Executors.newFixedThreadPool(thread);
-		int n = 100000000;
+		int n = 100000;
 		final int section = n/thread;
-		for (int i=1;i<=thread;i++){
+		for (int i=1;i<=thread+10;i++){
 			pool.execute(new PrimeTask(section*(i-1)+1,section*i));
 		}
 		pool.shutdown();
